@@ -19,7 +19,7 @@ func main() {
 			httpsBuilder.WriteString("/search?q=")
 			httpsBuilder.WriteString(os.Args[2])
 			fmt.Println("The url is. I will automatically launch it for you",httpsBuilder.String())
-			safaricmd := exec.Command("open", "-a", "Firefox", httpsBuilder.String())
+			safaricmd := exec.Command("open", "-a", "Safari", httpsBuilder.String())
 			if safaricmd.Run() == nil {
 				color.Green("Succes")
 				os.Exit(0)
